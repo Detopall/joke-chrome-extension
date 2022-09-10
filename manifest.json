@@ -1,12 +1,12 @@
 {
-    "name": "Joke Extension",
+    "name": "Random Joke",
     "version": "1.0.0",
     "description": "Displays a joke when the button is pressed from an API",
     "manifest_version": 3,
     "author": "Denis Topallaj",
     "action":{
         "default_popup": "index.html",
-        "default_title": "Joke Extension"
+        "default_title": "Random Joke"
     },
 	"icons": {
 		"128": "./icons/128.png",
