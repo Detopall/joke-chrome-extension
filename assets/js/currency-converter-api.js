@@ -12,7 +12,7 @@ async function displayConversion(e){
 	const from = document.querySelector("#from").value;
 	const to = document.querySelector("#to").value;
 	const amount = document.querySelector("#q").value;
-	const exchangeResult = parseFloat(amount) * parseFloat(conversion);
+	const exchangeResult = (parseFloat(amount) * parseFloat(conversion)).toFixed(2);
 
 	result.innerHTML = "";
 	let html = "";
