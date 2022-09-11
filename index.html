@@ -29,12 +29,11 @@
 				<label for="q"> Amount: </label>
 				<input type="number" id="q" min="0" autocomplete="off" required>
 		
-				<button type="submit">Convert</button>
+				<button type="submit" id="make-conversion">Convert</button>
 			</form>
 
-			<article class="result">
-				<h2> temp </h2>
-				<p> From -> to: end </p>
+			<article class="result hidden">
+				<h2> Currency Converted </h2>
 			</article>
 		</div>
 		<button type="button" class="change" data-target="joke">Change To Joke </button>
@@ -43,10 +42,6 @@
 	<div class="joke-api-ext hidden">
 		<header> Press the button to receive a joke </header>
 		<button type="button" id="new-joke">New joke</button>
-		<div id="options">
-			<label for="blacklistFlags"> No Racism/NSFW</label>
-			<input type="checkbox" value="nsfw,racist" id="blacklistFlags">
-		</div>
 		<div id="result"></div>
 		<button type="button" class="change" data-target="currency">Change To Currency Converter </button>
 	</div>

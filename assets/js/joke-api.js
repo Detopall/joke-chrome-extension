@@ -1,6 +1,6 @@
 "use strict";
 
-async function getJokeFromAPI(racism){
+async function getJokeFromAPI(){
 	const options = {
 		method: 'GET',
 		headers: {
@@ -9,24 +9,17 @@ async function getJokeFromAPI(racism){
 		}
 	};
 	
-	const fetchJoke = await fetch(`${URL}${racism}`, options);
+	const fetchJoke = await fetch(`${URL}`, options);
 	const res = await fetchJoke.json();
 	return res;
 }
 
 async function displayJoke(e){
 	if (!e.target.closest("#new-joke")) return;
-	const racism = checkForNSFW();
-	const joke = await getJokeFromAPI(racism);
+	const joke = await getJokeFromAPI();
 	const div = document.querySelector("#result");
 	div.innerHTML = "";
 	div.insertAdjacentHTML("beforeend", jokeFormPerType(joke));
-}
-
-function checkForNSFW(){
-	const optionChecked = document.querySelector("input#blacklistFlags").checked;
-	if (!optionChecked) return "";
-	return "&blacklistFlags=nsfw%2Cracist";
 }
 
 function jokeFormPerType(joke){
