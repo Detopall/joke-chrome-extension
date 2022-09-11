@@ -1,19 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
 
+/* ALL */
+
 body {
-	width: 20rem;
-	height: 15rem;
 	background-color: black;
-	color: white;
-	font-size: 1rem;
-	font-weight: bold;
-	font-family: 'Josefin Sans', sans-serif;
 }
 
 header {
 	display: block;
 	text-align: center;
-	font-size: 1rem;
+	font-size: 1.5rem;
+	margin-top: 2rem;
 	text-decoration: underline;
 	margin-bottom: 0.6rem;
 }
@@ -22,12 +19,7 @@ p {
 	margin-bottom: 1rem;
 }
 
-label {
-	margin-left: 25%;
-}
-
 button {
-	margin-left: 37%;
 	border: solid white 0.1rem;
 	border-radius: 0.5rem;
 	font-family: 'Josefin Sans', sans-serif;
@@ -37,4 +29,68 @@ button {
 
 button:hover {
 	background-color: lightgrey;
+}
+
+.hidden {
+	display: none;
+}
+
+.joke-api-ext, .currency-converter-ext {
+	background-color: black;
+	color: white;
+	font-size: 1rem;
+	font-weight: bold;
+	font-family: 'Josefin Sans', sans-serif;
+}
+
+.joke-api-ext .change, .currency-converter-ext .change {
+	position: absolute;
+	bottom: 2rem;
+	right: 2rem;
+}
+
+/* CURRENCY CONVERTER */
+
+.currency-converter-ext {
+	width: 30rem;
+	height: 10rem;
+}
+
+.currency-converter-ext form {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	margin-top: 2rem;
+	margin-bottom: 5rem;
+}
+
+.currency-converter-ext .flex-container {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+.currency-converter-ext select, .currency-converter-ext input {
+	margin-bottom: 1rem;
+}
+
+.currency-converter-ext input {
+	width: 4rem;
+}
+
+
+/* JOKE API */
+
+.joke-api-ext {
+	width: 30rem;
+	height: 15rem;
+}
+
+.joke-api-ext label {
+	margin-left: 25%;
+}
+
+.joke-api-ext button:not(.change) {
+	margin-left: 37%;
 }

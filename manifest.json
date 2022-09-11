@@ -1,12 +1,12 @@
 {
-    "name": "Random Joke",
+    "name": "Random Joke Or Currency Converter",
     "version": "1.0.0",
     "description": "Displays a joke when the button is pressed from an API",
     "manifest_version": 3,
     "author": "Denis Topallaj",
     "action":{
         "default_popup": "index.html",
-        "default_title": "Random Joke"
+        "default_title": "Random Joke Or Currency Converter"
     },
 	"icons": {
 		"128": "./icons/128.png",
