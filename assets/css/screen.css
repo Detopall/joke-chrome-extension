@@ -21,7 +21,8 @@ p {
 
 button {
 	border: solid white 0.1rem;
-	border-radius: 0.5rem;
+	border-radius: 0.4rem;
+	padding: 0.2rem;
 	font-family: 'Josefin Sans', sans-serif;
 	font-weight: bold;
 	cursor: pointer;
@@ -49,12 +50,12 @@ button:hover {
 	right: 2rem;
 }
 
-/* CURRENCY CONVERTER */
-
-.currency-converter-ext {
+.joke-api-ext, .currency-converter-ext {
 	width: 30rem;
-	height: 10rem;
+	height: 15rem;
 }
+
+/* CURRENCY CONVERTER */
 
 .currency-converter-ext form {
 	display: flex;
@@ -81,11 +82,6 @@ button:hover {
 
 
 /* JOKE API */
-
-.joke-api-ext {
-	width: 30rem;
-	height: 15rem;
-}
 
 .joke-api-ext label {
 	margin-left: 25%;
