@@ -1,7 +1,7 @@
 "use strict";
 
 document.addEventListener("DOMContentLoaded", init);
-const URL = "https://jokeapi-v2.p.rapidapi.com/joke/Any?format=json&idRange=0-150";
+const JOKE_URL = "https://jokeapi-v2.p.rapidapi.com/joke/Any?format=json&idRange=0-150";
 
 async function init(){
 	document.addEventListener("click", displayJoke);

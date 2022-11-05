@@ -1,15 +1,19 @@
 "use strict";
 
 async function getJokeFromAPI(){
+	const rapidKeyJoke = document.querySelector("#rapidKeyJoke").value;
+
+	if (rapidKeyJoke === null) return;
+
 	const options = {
 		method: 'GET',
 		headers: {
-			'X-RapidAPI-Key': '90afc290a4msh942c639bb0fe563p15afe0jsn7d560927cf10',
+			'X-RapidAPI-Key': `${rapidKeyJoke}`,
 			'X-RapidAPI-Host': 'jokeapi-v2.p.rapidapi.com'
 		}
 	};
 	
-	const fetchJoke = await fetch(`${URL}`, options);
+	const fetchJoke = await fetch(`${JOKE_URL}`, options);
 	const res = await fetchJoke.json();
 	return res;
 }

@@ -34,10 +34,14 @@ async function displayConversion(e){
 }
 
 async function getExchangeInfo(){
+	const rapidKeyCur = document.querySelector("#rapidKeyCur").value;
+
+	if (rapidKeyCur === null) return;
+
 	const fetchInfo = await fetch(`${CONVERT_CURRENCY_URL}${objectToQueryParams(getUserInfo())}`, {
 	method: 'GET',
 	headers: {
-    'X-RapidAPI-Key': '90afc290a4msh942c639bb0fe563p15afe0jsn7d560927cf10',
+    'X-RapidAPI-Key': `${rapidKeyCur}`,
     'X-RapidAPI-Host': 'currency-exchange.p.rapidapi.com'}
 	});
 	const res = await fetchInfo.json();

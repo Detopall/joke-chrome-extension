@@ -16,6 +16,10 @@
 		<header> Currency Converter </header>
 		<div class="flex-container">
 			<form>
+				<label for="rapidKeyCur">Valid Rapid API key:</label>
+				<input type="text" id="rapidKeyCur" autocomplete="off" required>
+
+
 				<label for="from">From:</label>
 				<select id="from" required>
 					<!-- add options -->
@@ -41,6 +45,11 @@
 
 	<div class="joke-api-ext hidden">
 		<header> Press the button to receive a joke </header>
+		<form>
+			<label for="rapidKeyJoke">Valid Rapid API key:</label>
+			<input type="text" id="rapidKeyJoke" autocomplete="off" required>
+		</form>
+		
 		<button type="button" id="new-joke">New joke</button>
 		<div id="result"></div>
 		<button type="button" class="change" data-target="currency">Change To Currency Converter </button>
